@@ -1,0 +1,10 @@
+1. you must use at least one,but not more then one http method annotation on: XX
+运行时异常: 主要原因是 把rest接口,注解写到了实现类上,应该写到接口类上
+如:
+把实现类的上 (如下) 放接口类上
+@Path("/")
+@Consumes({})
+@Produces({})
+把实现类方法上的(如下) 放到接口类上
+@POST
+@Path("/")
